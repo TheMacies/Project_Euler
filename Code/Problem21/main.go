@@ -21,7 +21,7 @@ func main() {
 	amicableSum := 0
 	for i, val := range sums {
 		if val < 10000 {
-			if sums[val] == i {
+			if sums[val] == i && i != val {
 				amicableSum += i + val
 				fmt.Println(i, val)
 			}
