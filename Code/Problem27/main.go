@@ -25,6 +25,7 @@ func countPrimes(a, b int) int {
 	n := 0
 	for {
 		value := n*n + n*a + b
+		// a is prime if and only if -a is prime
 		if value < 0 {
 			value = -value
 		}
