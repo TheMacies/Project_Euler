@@ -8,6 +8,7 @@ import (
 func main() {
 	a := new(big.Int).SetInt64(1)
 	b := new(big.Int).SetInt64(1)
+
 	i := 2
 	for len(b.String()) < 1000 {
 		c := b
