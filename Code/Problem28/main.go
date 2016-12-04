@@ -13,11 +13,7 @@ func sumDiagonals(spiral [][]int) int {
 }
 
 func generateSpiral(side int) [][]int {
-	// cannot make a spiral out of even-length side square
-	if side%2 == 0 {
-		side++
-	}
-
+	
 	spiral := make([][]int, side)
 	for i := 0; i < side; i++ {
 		spiral[i] = make([]int, side)
@@ -29,10 +25,7 @@ func generateSpiral(side int) [][]int {
 	spiral[x][y] = 1
 	currentValue := 2
 	currentSide := 3
-	for {
-		if elemets < currentValue {
-			break
-		}
+	for currentSide != side{
 		x++
 		for i := 0; i < currentSide-2; i++ {
 			spiral[x][y] = currentValue
