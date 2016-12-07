@@ -13,19 +13,18 @@ func sumDiagonals(spiral [][]int) int {
 }
 
 func generateSpiral(side int) [][]int {
-	
+
 	spiral := make([][]int, side)
 	for i := 0; i < side; i++ {
 		spiral[i] = make([]int, side)
 	}
-	elemets := side * side
 
 	x := side / 2
 	y := side / 2
 	spiral[x][y] = 1
 	currentValue := 2
 	currentSide := 3
-	for currentSide != side{
+	for currentSide != side {
 		x++
 		for i := 0; i < currentSide-2; i++ {
 			spiral[x][y] = currentValue
