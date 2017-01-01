@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func countDigitOccurance(number int) []int {
+func countDigitsOccurances(number int) []int {
 	var oc []int
 	oc = make([]int, 10)
 	for number > 0 {
@@ -12,7 +12,7 @@ func countDigitOccurance(number int) []int {
 	return oc
 }
 
-func compareTables(t1, t2 []int) bool {
+func compareArrays(t1, t2 []int) bool {
 	for i := range t1 {
 		if t1[i] != t2[i] {
 			return false
@@ -23,20 +23,20 @@ func compareTables(t1, t2 []int) bool {
 
 func main() {
 	for i := 100; ; i++ {
-		occ := countDigitOccurance(i)
-		if !compareTables(occ, countDigitOccurance(i*2)) {
+		occ := countDigitsOccurances(i)
+		if !compareArrays(occ, countDigitsOccurances(i*2)) {
 			continue
 		}
-		if !compareTables(occ, countDigitOccurance(i*3)) {
+		if !compareArrays(occ, countDigitsOccurances(i*3)) {
 			continue
 		}
-		if !compareTables(occ, countDigitOccurance(i*4)) {
+		if !compareArrays(occ, countDigitsOccurances(i*4)) {
 			continue
 		}
-		if !compareTables(occ, countDigitOccurance(i*5)) {
+		if !compareArrays(occ, countDigitsOccurances(i*5)) {
 			continue
 		}
-		if !compareTables(occ, countDigitOccurance(i*6)) {
+		if !compareArrays(occ, countDigitsOccurances(i*6)) {
 			continue
 		}
 		fmt.Println(i)
