@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-var groups [][]int
+var grids [][]int
 
 const (
 	s = 10000
@@ -12,17 +12,17 @@ func main() {
 	area := 0
 	nearest := 2000000
 	var diff int
-	groups = make([][]int, s)
-	for g := range groups {
-		groups[g] = make([]int, s)
+	grids = make([][]int, s)
+	for g := range grids {
+		grids[g] = make([]int, s)
 	}
 	for i := 1; i < s; i++ {
-		groups[1][i] = ((i + 1) * i) / 2
+		grids[1][i] = ((i + 1) * i) / 2
 	}
 	for a := 2; a < s; a++ {
 		for b := a; b < s; b++ {
-			groups[a][b] = groups[a-1][b] + a*((b+1)*b)/2
-			diff = 2000000 - groups[a][b]
+			grids[a][b] = grids[a-1][b] + a*((b+1)*b)/2
+			diff = 2000000 - grids[a][b]
 			if diff < 0 {
 				diff = -diff
 			}
