@@ -33,9 +33,10 @@ func main() {
 			}
 		}
 	}
-	val, err := g.Dijkstra(0, 80*80-1)
+	val, err := g.Dijkstra(0)
+	fmt.Println(val)
 	if err != nil {
 		fmt.Println(err)
 	}
-	fmt.Println(matrix[0][0] + val)
+	fmt.Println(matrix[0][0] + val[80*80-1])
 }
