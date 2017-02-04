@@ -14,11 +14,9 @@ func countHexagons(l int) int {
 }
 
 func main() {
-	t := time.Now()
 	sum := 0
 	for i := 3; i <= 12345; i++ {
 		sum += countHexagons(i)
 	}
-	fmt.Println(time.Since(t))
 	fmt.Println(sum)
 }
